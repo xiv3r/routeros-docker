@@ -1,0 +1,9 @@
+line-length = 120
+
+[lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT']
+
+[format]
+preview = true
+quote-style = 'single'
