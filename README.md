@@ -2,6 +2,8 @@
 
 Docker image for Mikrotik RouterOS.
 
+![winbox](https://github.com/user-attachments/assets/dcb7056c-6056-45a5-8c6b-726e8056a6ea)
+
 > [!IMPORTANT]
 > This docker image was made for testing and lab use only. I am not responsible if you use it for commercial or production purposes.
 
