@@ -1,6 +1,6 @@
 # Mikrotik RouterOS on Docker
 
-Imagem Docker para Mikrotik RouterOS.
+Docker image for Mikrotik RouterOS.
 
 > [!IMPORTANT]
 > This docker image was made for testing and lab use only. I am not responsible if you use it for commercial or production purposes.
