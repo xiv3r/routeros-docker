@@ -1,5 +1,9 @@
 # Mikrotik RouterOS on Docker
 
+![Mikrotik](https://img.shields.io/badge/Mikrorik-293239?style=flat&logo=mikrotik&logoColor=white)
+[![LICENSE](https://img.shields.io/badge/License-MIT-red.svg)](LICENSE)
+[![LICENSE](https://img.shields.io/badge/version-7.17.1-blue)](LICENSE)
+
 Docker image for Mikrotik RouterOS.
 
 ![winbox](https://github.com/user-attachments/assets/dcb7056c-6056-45a5-8c6b-726e8056a6ea)
@@ -34,17 +38,9 @@ services:
         image: henriquesebastiao/routeros:latest
         privileged: true
         ports:
-            - "21:21" # ftp
-            - "22:22" # ssh
-            - "23:23" # telnet
-            - "80:80" # www
-            - "443:443" # www-ssl
-            - "1194:1194" # OVPN
-            - "1450:1450" # L2TP
-            - "8291:8291" # winbox
-            - "8728:8728" # api
-            - "8729:8729" # api-ssl
-            - "13231:13231" # WireGuard
+            - "22:22" # SSH
+            - "80:80" # Web
+            - "8291:8291" # Winbox
         cap_add: 
             - NET_ADMIN
         devices: 
@@ -57,38 +53,42 @@ services:
 docker run -d \
     --name=routeros \
     --privileged \
-    -p 21:21 \
     -p 22:22 \
-    -p 23:23 \
     -p 80:80 \
-    -p 443:443 \
-    -p 1194:1194 \
-    -p 1450:1450 \
     -p 8291:8291 \
-    -p 8728:8728 \
-    -p 8729:8729 \
-    -p 13231:13231 \
     --cap-add=NET_ADMIN \
     --device=/dev/net/tun \
     henriquesebastiao/routeros:latest
 ```
 
-### Parameters
+### Ports and Protocols Exposed
 
-Containers are configured using parameters passed at runtime (such as those above). These parameters are separated by a colon and indicate `<external>:<internal>` respectively. For example, `-p 8080:80` would expose port `80` from inside the container to be accessible from the host's IP on port `8080` outside the container.
+Check the list of ports exposed in the image and use the ones necessary for your use case.
 
-| Parameter | Function |
-| :----: | --- |
-| `-p 21:21` | FTP |
-| `-p 22:22` | SSH |
-| `-p 23:23` | Telnet |
-| `-p 80:80` | WWW |
-| `-p 443:443` | WWW-SSL |
-| `-p 1194:1194` | OVPN |
-| `-p 1450:1450` | L2TP |
-| `-p 8291:8291` | Winbox |
-| `-p 8728:8728` | API |
-| `-p 8729:8729` | API-SSL |
-| `-p 13231:13231` | WireGuard |
-| `--cap-add=NET_ADMIN` | Add capabilities to the container |
-| `--device=/dev/net/tun` | Add a device to the container |
+| Port | Protocol | Description |
+| :----: | :----: | :---- |
+| 20 | TCP | FTP Data |
+| 21 | TCP | FTP Control |
+| 22 | TCP | SSH |
+| 23 | TCP | Telnet |
+| 53 | TCP/UDP | DNS |
+| 67 | UDP | DHCP Server |
+| 68 | UDP | DHCP Client |
+| 80 | TCP | HTTP |
+| 123 | UDP | NTP |
+| 161 | UDP | SNMP |
+| 443 | TCP | HTTPS |
+| 500 | UDP | Internet Key Exchange |
+| 546 | UDP | DHCPv6 Client |
+| 547 | UDP | DHCPv6 Server |
+| 1194 | TCP/UDP | OpenVPN |
+| 1701 | UDP | L2TP |
+| 1723 | TCP | PPTP |
+| 2000 | TCP/UDP | Bandwidth Test Server |
+| 4500 | UDP | NAT Traversal |
+| 5678 | TCP | Mikrotik Neighbor Discovery Protocol |
+| 8080 | TCP | HTTP Proxy |
+| 8291 | TCP | Winbox |
+| 8728 | TCP | API |
+| 8729 | TCP | API-SSL |
+| 13231 | UDP | WireGuard |
