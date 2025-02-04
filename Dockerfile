@@ -31,7 +31,7 @@ WORKDIR /routeros
 
 COPY bin /routeros/bin
 
-EXPOSE 1723 1701 1194 21 22 23 443 80 8291 8728 8729
+EXPOSE 20/tcp 21/tcp 22/tcp 23/tcp 53/tcp 53/udp 67/udp 68/udp 80/tcp 123/udp 161/udp 443/tcp 500/udp 546/udp 547/udp 1194/tcp 1194/udp 1701/udp 1723/tcp 2000/tcp 2000/udp 4500/udp 5678/udp 8080/tcp 8291/tcp 8728/tcp 8729/tcp 13231/udp
 
 RUN chmod +x /routeros/bin/entrypoint.sh && \
     chmod +x /routeros/bin/generate-dhcpd-conf.py && \
