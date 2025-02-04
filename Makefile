@@ -7,11 +7,11 @@ all: build latest
 
 build:
 	docker buildx create --use
-	docker buildx build --platform=linux/amd64,linux/arm64 -t $(TARGET):$(ROUTEROS_VERSION) --push .
+	docker buildx build --build-arg ROUTEROS_VERSION=$(ROUTEROS_VERSION) --platform=linux/amd64,linux/arm64 -t $(TARGET):$(ROUTEROS_VERSION) --push .
 
 latest:
 	docker buildx create --use
-	docker buildx build --platform=linux/amd64,linux/arm64 -t $(TARGET):latest --push .
+	docker buildx build --build-arg ROUTEROS_VERSION=$(ROUTEROS_VERSION) --platform=linux/amd64,linux/arm64 -t $(TARGET):latest --push .
 
 lint:
 	ruff check bin/generate-dhcpd-conf.py; ruff check bin/generate-dhcpd-conf.py --diff

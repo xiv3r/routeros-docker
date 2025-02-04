@@ -2,9 +2,11 @@ FROM --platform=$BUILDPLATFORM alpine AS build
 
 LABEL maintainer="Henrique Sebastião <contato@henriquesebastiao.com>"
 
-ENV ROUTEROS_URL=https://download.mikrotik.com/routeros/7.17.1/chr-7.17.1.vdi.zip
-ENV ROUTEROS_IMAGE=chr-7.17.1.vdi
-ENV ROUTEROS_VERSION=7.17.1
+ARG ROUTEROS_VERSION
+
+ENV ROUTEROS_URL=https://download.mikrotik.com/routeros/${ROUTEROS_VERSION}/chr-${ROUTEROS_VERSION}.vdi.zip
+ENV ROUTEROS_IMAGE=chr-${ROUTEROS_VERSION}.vdi
+ENV ROUTEROS_VERSION=${ROUTEROS_VERSION}
 ENV VNCPASSWORD=false
 ENV KEYBOARD=en-us
 
