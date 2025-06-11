@@ -1,8 +1,8 @@
 # Mikrotik RouterOS on Docker
 
 ![Mikrotik](https://img.shields.io/badge/Mikrorik-293239?style=flat&logo=mikrotik&logoColor=white)
-[![LICENSE](https://img.shields.io/badge/License-MIT-red.svg)](LICENSE)
-[![LICENSE](https://img.shields.io/badge/version-7.17.1-blue)](LICENSE)
+[![LICENSE](https://img.shields.io/github/license/henriquesebastiao/routeros-docker)](LICENSE)
+[![Version](https://img.shields.io/github/v/release/henriquesebastiao/routeros-docker)](Version)
 
 Docker image for Mikrotik RouterOS.
 
