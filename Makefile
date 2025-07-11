@@ -1,6 +1,6 @@
 #!make
 
-ROUTEROS_VERSION := 7.19.1
+ROUTEROS_VERSION := 7.19.2
 TARGET := henriquesebastiao/routeros
 
 all: build latest
