@@ -19,4 +19,7 @@ lint:
 format:
 	ruff format bin/generate-dhcpd-conf.py; ruff check bin/generate-dhcpd-conf.py --fix
 
-.PHONY: all build latest lint format
+changelog:
+	curl -s https://download.mikrotik.com/routeros/$(ROUTEROS_VERSION)/CHANGELOG -o CHANGELOG.temp
+
+.PHONY: all build latest lint format changelog
