@@ -1,3 +1,30 @@
+What's new in 7.20.2 (2025-Oct-21 10:28):
+
+*) bridge - fixed incorrectly blocked ports by STP (introduced in v7.20);
+*) console - fixed incorrect ids in /file/print relative mode (introduced in v7.20);
+*) console - improved stability when printing ids for a non-existent directory (introduced in v7.20)
+*) dhcpv6-client - improved system stability when DHCPv6 client uses "rapid-commit=no", "accept-prefix-without-address=no" and receives only prefix from the server;
+*) dhcpv6-server - do not force set "address-pool" on static bindings with unset pool option after system reboot;
+*) evpn - added basic logging support;
+*) evpn - fixed MAC mobility;
+*) firewall - reduce maximum connection tracking entry count;
+*) iot - fixed an issue preventing LoRa downlink packets from being broadcasted;
+*) ip - removed duplicate CLI parameters for socksify;
+*) log - cleaned up older config by removing leading slashes from "disk-file-name" values;
+*) mpls - fixed LDP label binding if nexthop is link-local address;
+*) poe-out - fixed RB5009 PoE-in indication on cold-boot with no other power source;
+*) routing-filter - change "^$" regexp to bgp-path-len=0 on upgrade from v6 to v7;
+*) routing-filter - use bgp-out-med for set bgp-med on upgrade from v6 to v7;
+*) snmp - fixed SNMP SET operation (introduced in v7.20);
+*) snmp - set maximum message size to 8 KB;
+*) system - fixed ".auto.rsc" file execution (introduced in v7.20);
+*) system - fixed package list fetch from local upgrade server;
+*) system - fixed Windows executable compatibility with Microsoft AppLocker;
+*) winbox - added IP/Socksify menu;
+*) winbox - added support for 200Gbps/400Gbps Rate fields;
+*) winbox - fixed Ethernet Tx Stats (introduced in v7.20);
+
+
 What's new in 7.20.1 (2025-Oct-10 11:49):
 
 *) bgp - added output.network-blackhole setting;
