@@ -1,3 +1,13 @@
+What's new in 7.20.3 (2025-Oct-28 14:45):
+
+*) lte - fixed LED behavior for Chateau 5G R17 ax;
+*) ppp - do not automatically add apn=internet for manually created ppp-client interfaces;
+*) ppp - fixed ppp-client not dialing when two interfaces use same multi-channel port;
+*) snmp - fixed various connection tracking OID definitions in MIKROTIK-MIB;
+*) ssh - fixed non-interactive command execution (introduced in v7.20);
+*) wifi - changed country code to "XA" for "UK 5.8 fixed outdoor" regulatory domain;
+
+
 What's new in 7.20.2 (2025-Oct-21 10:28):
 
 *) bridge - fixed incorrectly blocked ports by STP (introduced in v7.20);
