@@ -1,3 +1,15 @@
+What's new in 7.20.6 (2025-Dec-04 14:00):
+
+*) bgp - fixed missing VRF parameter in template configuration after upgrade;
+*) console - improved service stability and memory allocation when using "regexp" operator;
+*) console - improved service stability when executing commands that can timeout;
+*) dhcp - execute "lease-script" with DHCP server creator user permissions;
+*) pppoe-server - fixed client disconnects when multiple servers with different service names are active (introduced in v7.20);
+*) routerboard - do not show "upgrade-firmware" if available installation is older than minimal supported one;
+*) socksify - listen on all addresses for incoming connections;
+*) system - updated PCI id names;
+
+
 What's new in 7.20.5 (2025-Nov-27 10:17):
 
 *) bgp - fixed BGP origin attribute initial value;
