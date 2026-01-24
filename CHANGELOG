@@ -1,3 +1,21 @@
+What's new in 7.20.5 (2025-Nov-27 10:17):
+
+*) bgp - fixed BGP origin attribute initial value;
+*) bgp - properly apply link.local connection setting when it is used as an interface;
+*) bgp-vpn - fixed prefix matching for filters "dst" matcher;
+*) ospf - fixed wrong LS Ack warning;
+*) pimsm - added comment for static-rp;
+*) route - fixed gateway print when gateway is equal to BGP peers address;
+*) route - fixed some routes installed in main routing table instead of specified VRF;
+*) route - make discourse work with destinations from VRF;
+*) routing-filter - fixed inline filters that process BGP communities;
+*) system - improved incoming TCP connection responsiveness;
+*) user - improved login service stability on busy system;
+*) webfig - fixed broken WebFig after going to Quick Set (introduced in v7.20.4);
+*) wifi - improved regulatory compliance for Bangladesh country profile;
+*) winbox - group L3 and L4 fields under switch rules menu;
+
+
 What's new in 7.20.4 (2025-Nov-05 14:07):
 
 *) bgp - improved instance upgrade from versions prior to v7.20;
